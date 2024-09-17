@@ -2,7 +2,6 @@
   <div>
     {{ todos }}
     <button @click="createTodo()">Add Todo</button>
-    <button @click="updateTodo({ })">Update Todo</button>
     <NuxtRouteAnnouncer />
     <NuxtWelcome />
   </div>
@@ -20,9 +19,6 @@
   type Todos = Todo[];
   
   const todos = ref<Todos>([]);
-  const updateId = ref<Todo['title']>('');
-  const updateTitle = ref('');
-  const updateBody = ref('');
 
   function createTodo() {
     const newTodo = {
